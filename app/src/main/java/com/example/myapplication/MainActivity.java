@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,5 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void disable (View v){
         v.setEnabled(false);
+        Button myButt = (Button) v;
+        myButt.setText("Salamanca");
+        Log.d("success", "disabled butttonn");
     }
 }
