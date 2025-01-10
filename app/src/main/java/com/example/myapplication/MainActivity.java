@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void handleText (View v){
+        EditText tatito = findViewById(R.id.source);
+        String input = tatito.getText().toString();
+        ((TextView)findViewById(R.id.autput)).setText("mi nombre es: " + input);
+        Log.d("info", input);
+    }
     public void disable (View v){
         findViewById(R.id.button21).setEnabled(false);
         ((Button)findViewById(R.id.button21)).setText("Disabled");
