@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         EditText tatito = findViewById(R.id.source);
         String input = tatito.getText().toString();
         ((TextView)findViewById(R.id.autput)).setText("mi nombre es: " + input);
+        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
         Log.d("info", input);
     }
     public void disable (View v){
